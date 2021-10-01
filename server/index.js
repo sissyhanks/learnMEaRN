@@ -8,9 +8,13 @@ import dotenv from 'dotenv';
 import { connectDB } from './config/db.js'
 // const connectDB = require('./config/db');
 
+import postRoutes from './routes/posts.js';
+
 dotenv.config({ path: '.env'});
 
 const app = express();
+
+app.use('/posts', postRoutes);
 
 app.use(express.urlencoded({
   limit: "30mb",
