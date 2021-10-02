@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
 
-// following line of code imports the posts function from post js in teh reducers folder and then is stored in const store below  
+// following line of code imports the posts function from post js in the reducers folder and then is stored in const store below  
 import reducers from './reducers';
 
 import App from './App';
