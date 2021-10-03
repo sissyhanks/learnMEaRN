@@ -14,8 +14,6 @@ dotenv.config({ path: '.env'});
 
 const app = express();
 
-app.use('/posts', postRoutes);
-
 app.use(express.urlencoded({
   limit: "30mb",
   extended: true
@@ -27,6 +25,8 @@ app.use(express.json({
 
 //cors enables the ability to allow or restrict requested resources on a web server depend on where the HTTP request was initiated. This policy is used to secure a certain web server from access by other website or domain.
 app.use(cors());
+
+app.use('/posts', postRoutes);
 
 if (process.env.NODE_ENV === 'development') {
   //if development environment use morgan logging middleware 
