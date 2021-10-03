@@ -8,7 +8,7 @@ import useStyles from './styles';
 import { createPost} from '../../actions/posts';
 
 const Form = () => {
-  const [postData, setPostData] = useState({ creator: '', title: '', message: '', selectedFile: '' });
+  const [postData, setPostData] = useState({ creator: '', title: '', message: '', tags: '', selectedFile: '' });
   const classes = useStyles();
   const dispatch = useDispatch()
 
@@ -53,10 +53,10 @@ const Form = () => {
         <TextField 
         name="tags" 
         variant="outlined" 
-        label="Tag" 
+        label="Tags" 
         fullWidth
-        value={postData.tag}
-        onChange={(e) => setPostData({ ...postData, tag: e.target.value })}
+        value={postData.tags}
+        onChange={(e) => setPostData({ ...postData, tags: e.target.value })}
         />
         <div className={classes.fileInput}>
           <FileBase
