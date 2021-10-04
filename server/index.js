@@ -28,6 +28,10 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
+app.get('/', (req, res) => {
+  res.send('You are learning MEaRN');
+});
+
 if (process.env.NODE_ENV === 'development') {
   //if development environment use morgan logging middleware 
   app.use(morgan('dev'));
