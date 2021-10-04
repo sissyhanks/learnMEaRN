@@ -11,6 +11,8 @@ const posts = (posts = [], action) => {
     //because all postys are being fetched from api in posts.js action creator and sent them through the action.payload >> action.payload can be passed to display them in this logic
     case 'DELETE':
       return posts.filter((post) => post._id !== action.payload);
+    case 'LIKE':
+      return posts.map((post) => post._id === action.payload._id ? action.payload : post);
     case 'UPDATE':
       return posts.map((post) => post._id === action.payload._id ? action.payload : post);
     case 'FETCH_ALL':
