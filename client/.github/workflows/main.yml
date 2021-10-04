@@ -13,5 +13,5 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.11
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: learn-mearn
+          heroku_app_name: remember-mearn
           heroku_email: sissyhanks@yahoo.com
