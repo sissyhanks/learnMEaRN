@@ -7,7 +7,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 
 
-import useStyles from './styles';
+// import useStyles from './styles';
 import Auth from './components/Auth/Auth';
 
 const App = () => {
